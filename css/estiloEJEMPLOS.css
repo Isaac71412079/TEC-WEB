@@ -86,7 +86,7 @@
     color:black;
 }
 
-.botonHTML{
+.botonCarta{
     background-color: aqua;
     text-align:start;
     font-size: 25px;
@@ -97,7 +97,7 @@
     height: 70px;
     width:250px;
 }
-.botonHTML:hover{
+.botonCarta:hover{
     color:black;
     background-color: rgb(144, 255, 54);
     
