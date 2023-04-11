@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARTA</title>
+    <link rel="stylesheet" href="css/estiloCARTA.css">
+
+    <style>
+    #body{
+        background-image: url("imagenes/fondo1.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+    } 
+    </style>
+</head>
+
+<body id="body">
+    <div id="barra">
+        <div id="Cabecera">
+            <div>
+                <img title="Isaac Rivero" class="LogoPrincipal" src="imagenes/letra.png" width="170" height="170">
+            </div>
+            <div>
+                <h1 id="header1">Modelo<br>De una Carta Formal</h1>
+            </div>
+        </div>
+        <div id="botonesPgPrincipal">
+            <ul id="MenuOpciones">
+                <button class="botonInicio" onclick="location.href='index.html'">INICIO</button>
+                <button class="botonHTML" onclick="location.href='ManualHTML.html'">Manual &lt;HTML&gt;</button>
+                <button class="botonCSS" onclick="location.href='ManualCSS.html'">Manual {CSS}</button>
+                <button class="botonEjemplos" onclick="location.href='Ejemplos.html'">EJEMPLOS</button>
+            </ul>
+
+        </div>
+    </div>
+
+    <header id="headerCarta">
+      <h1>Carta</h1>
+      <address>
+        <p>Remitente:</p>
+        <p>Mario Alvarado López</p>
+        <p>Monterrey, NL 14 de Marzo de 2020</p>
+        <p>La Paz, El Alto, 22025</p>
+        <p>77789890</p>
+      </address>
+      <time datetime="[fecha en formato ISO]">[14/03/20]</time>
+    </header>
+    <br>
+    <main>
+      <article>
+        <header>
+          <h2 id="dest">Destinatario:</h2>
+          <address>
+            <p>Mauricio López Martínez</p>
+            <p>Banco del Comercio</p>
+            <p>Madrid 28053 NL Calle Ramón Gómez</p>
+            <p>Santa Cruz, Montero, 19052</p>
+          </address>
+        </header>
+  
+        <section>
+          <h3>Asunto:</h>Curriculum Vitae</h3>
+  
+          <p>Estimado/a Mauricio López Martínez,</p>
+          <br>
+            <p id="cont">
+                Me dirijo de nuevo a usted para agradecerle la entrevista que mantuvimos el pasado viernes, en
+                la que conversamos a cerca de mi experiencia laboral como oficinista en paro.
+            </p>
+            <p id="cont">
+                Quisiera también, reiterarle mi gran interés en formar parte de su equipo, ya que considero que,
+                la filosofía de su empresa coincide plenamente con mi estilo de trabajo, basado en la pulcritud y
+                la discreción, y me siento capacitado para realizar con éxito las funciones de oficina asignadas al
+                puesto vacante.
+            </p>
+            <p id="cont">
+                A la espera de nuevas noticias, le agradezco el interés demostrado en mi candidatura y quedo a
+                su entera disposición para un próximo encuentro.
+            </p>
+          <br>  
+          <p>Atentamente,</p>
+          <p>Mario Alvarado López</p>
+        </section>
+  
+        <footer>
+          <p>Mientras tanto, quedo a la espera de sus gratas noticias.</p>
+        </footer>
+      </article>
+  
+      <aside id="info">
+        <figure>
+          <img src="imagenes/usuario (2).png" alt="Foto de Mario Alvarado López" width="240" height="240px">
+          <figcaption id="infoAutor"><strong>Mario Alvarado López</strong></figcaption>
+        </figure>
+  
+        <details>
+          <summary id="masinfo">Información de contacto:</summary>
+          <p><mark>22025</mark></p>
+          <p><mark>Monterrey, NL 14 de Marzo de 2020</mark></p>
+          <p><mark>77789890</mark></p>
+        </details>
+      </aside>
+    </main>
+    <footer id = "footerFin">
+      <p><strong>Opcional: información de derechos de autor o créditos de la página</strong></p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus suscipit velit harum quidem nostrum, repellendus soluta nemo, neque dicta libero, quis ea error laboriosam quas ipsam vitae beatae culpa eaque.</p>
+    </footer>
+  </body>
+</html>

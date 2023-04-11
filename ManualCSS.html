@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual CSS</title>
+    <link rel="stylesheet" href="css/estiloMANUAL_CSS.css">
+    <style>
+       #body{
+            background-image: url("imagenes/fondo1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        } 
+    </style>
+</head>
+
+<body id="body">
+    <div id="barra">
+        <div id="Cabecera">
+            <div>
+                <img title="Isaac Rivero" class="LogoPrincipal" src="imagenes/css-3.png" width="170" height="170">
+            </div>
+            <div>
+                <h1 id="header1">&lt;CSS&gt;<br> Hojas de estilo en cascada</h1>
+            </div>
+        </div>
+        <div id="botonesPgPrincipal">
+            <ul id="MenuOpciones">
+                <button class="botonInicio" onclick="location.href='index.html'">INICIO</button>
+                <button class="botonHTML" onclick="location.href='ManualHTML.html'">Manual &lt;HTML&gt;</button>
+                <button class="botonEjemplos" onclick="location.href='Ejemplos.html'">EJEMPLOS</button>
+                <button class="botonCarta" onclick="location.href='Carta.html'">CARTA</button>
+            </ul>
+        </div>
+    </div>
+    <div id="elementos">
+        <ul id="opcionTablas">
+            <button class="botonColores" onclick="location.href='#colores'">COLORES</button>
+            <button class="botonSelectores" onclick="location.href='#selectores'">SELECTORES</button>
+            <button class="botonUnidades" onclick="location.href='#unidades'">SELECTORES</button>
+            <button class="botonPropiedades" onclick="location.href='#propiedades'">PROPIEDADES</button>
+            <button class="botonFlexboxes" onclick="location.href='#flexboxes'">FLEXBOX</button>
+
+    </div>
+    <center>
+        <img src="imagenes/rgb.png" width="270" height="270">
+    </center>
+    <!--PRIMERA TABLA-->
+    <div>
+        <h2 id="colores">COLORES 
+            <table id="tablaCol">
+                <thead>
+                 <tr id="tabla1">
+                   <th>Elemento</th> 
+                   <th>Descripción</th>
+                   <th>Documentación</th>
+                 </tr>
+                </thead>
+                <tbody id="contTabla1">
+                <tr>
+                 <td>{;;color;;}</td>
+                 <td id="descp"><p>Establece el valor de color de primer plano del texto y las decoraciones de texto, establece el valor de color actual</p></td>
+                 <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="new" title="Documentación">COLOR</a></td>
+                </tr>
+
+                <tr>
+                 <td>{;;usando nombres de colores;;}</td>
+                 <td id="descp"><p>Podemos especificar un color usando un nombre predefinido</p></td>
+                 <td><a class="enlace" href="https://www.w3.org/TR/css-color-3/#svg-color" target="new" title="Documentación">NOMBRE DE COLORES</a></td>
+                 
+                </tr>
+
+                <tr>
+                    <td>{;;funcion RGB (r,g,b);;}</td>
+                    <td id="descp"><p>Define un color como la mezcla las intensidades de colores primarios, la función: rgb(red, green, blue), valores posibles son: [0-255] o [0%-100%]</p></td>
+                    <td><a class="enlace" href="https://www.w3.org/TR/css-color-3/#svg-color" target="new" title="Documentación">RGB</a></td>
+                </tr>
+
+                <tr>
+                    <td>{;;valores hexadecimales;;}</td>
+                    <td id="descp"><p>Número hexadecimal para definir un color. Alternativa a la función rgb, permite definir un color como la mezcla de intensidades de los colores primarios</p></td>
+                    <td><a class="enlace" href="https://www.google.com/search?si=AC1wQDAoyjQYg3jwXlqSN_ppczo9jKKsOmFX-ii0ceKX-Xhx5QxmQkS_9QR_UQFTNy8pZ0JSFc1Ium3jtyJ_ryJgK6Z_mfTCTA%3D%3D&hl=es-BO&kgs=9271fa6ec27a681f&shndl=21&source=sh/x/fbx/1&entrypoint=sh/x/fbx&fbxst=CgkKByNhZGFkYWQ" target="new" title="Documentación">VALORES HEXADECIMALES</a></td>
+                    
+                </tr>
+
+                <tr>
+                    <td>{;;opacidad;;}</td>
+                    <td id="descp"><p>Define la transparencia de un elemento,en qué grado se superpone el fondo al elemento</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity" target="new" title="Documentación">OPACIDAD</a></td>
+                    
+                </tr>
+
+                <tr>
+                    <td>{;;función hsl(h, s, l);;}</td>
+                    <td id="descp"><p>Define el color usando la función hsl(hue, saturation, lightness)</p></td>
+                    <td><a class="enlace" href="https://hslpicker.com/" target="new" title="Documentación">HSL</a></td>
+                    
+                </tr>
+
+                <tr>
+                    <td>{;;hue;;}</td>
+                    <td id="descp"><p>Valores posibles son: [0-360] Podemos obtener los valores de la rueda de colores</p></td>
+                    <td><a class="enlace" href="https://webplatform.github.io/docs/css/color/colors_by_hue/" target="new" title="Documentación">HUE</a></td>
+                </tr>
+
+                <tr>
+                    <td>{;;saturación;;}</td>
+                    <td id="descp"><p>Determina que tan fuerte o vivo es un color, valores posibles: [0%-100%] Donde 100% significa completamente saturado (color muy vivo) Donde 0% significa sin saturación alguna (color apagado)	</p></td>
+                    <td><a class="enlace" href="https://www.w3schools.com/css/css_colors_hsl.asp" target="new" title="Documentación">SATURACIÓN DEL COLOR</a></td>
+                    
+                </tr>
+
+                <tr>
+                    <td>{;;lightness;;}</td>
+                    <td id="descp"><p>Establece la claridad u oscuridad del color, los valores posibles son: [0%-100%] Donde 100% significa completamente blanco. Donde 50% es normal y Donde 0% es completamente negro	</p></td>
+                    <td><a class="enlace" href="https://www.w3schools.com/css/css_colors_hsl.asp" target="new" title="Documentación">LUMINOSIDAD</a></td>
+                    
+                </tr>
+
+                <tr>
+                    <td>{;;función hsla(h, s, l, a);;}</td>
+                    <td id="descp"><p>Define el color usando la función hsla(hue, saturation, lightness, opacity), con un valor de opacidad</p></td>
+                    <td><a class="enlace" href="https://www.w3schools.com/cssref/func_hsla.php" target="new" title="Documentación">HSLA</a></td>
+                    
+                </tr>
+
+                </tbody>
+            </table> 
+        </h2>
+    </div> 
+    <center>
+        <button class="botonArriba1" onclick="location.href='#top'"><img src="imagenes/flecha-arriba.png" width="90" height="90"></button>
+    </center>
+    
+
+    <center>
+        <img src="imagenes/selectores1.png" width="540" height="270">
+    </center>
+    <!--SEGUNDA TABLA-->
+    <div>
+        <h2 id="selectores">SELECTORES 
+            <table id="tablaCol">
+                <thead>
+                 <tr id="tabla2">
+                   <th>Elemento</th> 
+                   <th>Descripción</th>
+                   <th>Documentación</th>
+                 </tr>
+                </thead>
+                <tbody id="contTabla2">
+                <tr>
+                 <td>{;;selectores;;}</td>
+                 <td id="descp"><p>Selecciona elementos del documento a los que queremos aplicar estilos	</p></td>
+                 <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="new" title="Documentación">SELECTORES</a></td>
+                </tr>
+
+                <tr>
+                 <td>{;;selector universal (*);;}</td>
+                 <td id="descp"><p>Selecciona todos los elementos: *{ declaraciones CSS }</p></td>
+                 <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors" target="new" title="Documentación">SELECTOR UNIVERSAL</a></td>
+                 
+                </tr>
+
+                <tr>
+                    <td>{;;selector de tipo (elem);;}</td>
+                    <td id="descp"><p>Selecciona elementos usando el nombre del elemento: elem{ declaraciones CSS }</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors" target="new" title="Documentación">SELECTOR DE TIPO</a></td>
+                    
+                </tr>
+
+                <tr>
+                    <td>{;;selector de clase (.elem);;}</td>
+                    <td id="descp"><p>Selecciona elementos en función de los valores del atributo class de los elementos. Para que los elementos sean seleccionados, su atributo class debe incluir un valor que coincida con el valor del selector. .elem { declaraciones CSS }	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors" target="new" title="Documentación">SELECTOR DE CLASE</a></td>
+                    
+                </tr>
+
+                <tr>
+                    <td>{;;selector id (#elem);;}</td>
+                    <td id="descp"><p>Selecciona un elemento en función del valor del atributo ID del elemento. Para que el elemento sea seleccionado, el id debe coincidir exactamente con el valor dado en el selector #valor_atributo { declaraciones CSS }</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors" target="new" title="Documentación">SELECTOR DE ID</a></td>
+                    
+                </tr>
+
+                   <tr>
+                    <td>{;;selector atributos;;}</td>
+                    <td id="descp"><p>Coincide con los elementos en función de la presencia o el valor de un atributo dado</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" target="new" title="Documentación">SELECTOR DE ATRIBUTOS</a></td>
+                    
+                   </tr>
+
+                   <tr>
+                    <td>{;;pseudo-classes;;}</td>
+                    <td id="descp"><p>Selecciona elementos en base a su estado, posicion, e interacción del usuario</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="new" title="Documentación">PSEUDO-CLASES</a></td>
+                    
+                   </tr>
+
+                   <tr>
+                    <td>{;;:disabled;;}</td>
+                    <td id="descp"><p>Representa cualquier elemento deshabilitado</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled" target="new" title="Documentación">DISABLED</a></td>
+                    
+                   </tr>
+
+                   <tr>
+                    <td>{;;:first-child;;}</td>
+                    <td id="descp"><p>Representa el primer elemento entre un grupo de elementos hermanos	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child" target="new" title="Documentación">PRIMER HIJO</a></td>
+                    
+                   </tr>
+                   
+                   <tr>
+                    <td>{;;::nth-child;;}</td>
+                    <td id="descp"><p>Coincide con los elementos en función de su posición entre un grupo de hermanos	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child" target="new" title="Documentación">N HIJO</a></td>
+                    
+                   </tr>
+                   
+                   <tr>
+                    <td>{;;:hover;;}</td>
+                    <td id="descp"><p>Se activa cuando el usuario pasa el cursor sobre un elemento (puntero del mouse)	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover" target="new" title="Documentación">HOVER</a></td>
+                    
+                   </tr>
+                   
+                   <tr>
+                    <td>{;;pseudo-elementos;;}</td>
+                    <td id="descp"><p>Selecciona parte de un elemento en lugar del elemento mismo	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="new" title="Documentación">PSEUDO-ELEMENTOS</a></td>
+                    
+                   </tr>
+                   
+                   <tr>
+                    <td>{;;::first-letter;;}</td>
+                    <td id="descp"><p>Aplica estilos a la primera letra de la primera línea de un elemento de nivel de bloque, pero solo cuando no está precedido por otro contenido	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter" target="new" title="Documentación">FIRST-LETTER</a></td>
+                    
+                   </tr>
+                   
+                   <tr>
+                    <td>{;;::selection;;}</td>
+                    <td id="descp"><p>Aplica estilos a la parte de un documento que ha sido resaltada por el usuario (como hacer clic y arrastrar el mouse sobre el texto)	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::selection" target="new" title="Documentación">SELECTION</a></td>
+                    
+                   </tr>
+                   
+                   <tr>
+                    <td>{;;especificidad;;}</td>
+                    <td id="descp"><p>Algoritmo utilizado por los navegadores para la declaración CSS más relevante para un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/specificity" target="new" title="Documentación">ESPECIFICIDAD</a></td>
+                    
+                   </tr>
+                   
+                   <tr>
+                    <td>{;;::first-line;;}</td>
+                    <td id="descp"><p>Aplica estilos a la primera línea de un elemento de nivel de bloque	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line" target="new" title="Documentación">FIRST-LINE</a></td>
+                    
+                   </tr>
+                   
+
+                </tbody>
+            </table> 
+        </h2>
+    </div> 
+    <center>
+        <button class="botonArriba1" onclick="location.href='#top'"><img src="imagenes/flecha-arriba.png" width="90" height="90"></button>
+    </center>
+
+    <center>
+        <img src="imagenes/css units.png" width="450" height="590">
+    </center>
+
+    <!--TERCERA TABLA-->
+    <div>
+        <h2 id="unidades">UNIDADES 
+            <table id="tablaCol">
+                <thead>
+                 <tr id="tabla3">
+                   <th>Elemento</th> 
+                   <th>Descripción</th>
+                   <th>Documentación</th>
+                 </tr>
+                </thead>
+                <tbody id="contTabla3">
+
+                <tr>
+                    <td>{;;valores y unidades;;}</td>
+                    <td id="descp"><p>Tipos de valor más utilizados y sus valores y unidades más comunes</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="new" title="Documentación">VALORES Y UNIDADES</a></td>
+                </tr>
+                    
+                <tr>
+                    <td>{;;integer;;}</td>
+                    <td id="descp"><p>Es un tipo especial de numero que representa un número entero, ya sea positivo o negativo. Los números enteros se pueden usar en numerosas propiedades de CSS	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/integer" target="new" title="Documentación">INTEGER</a></td>
+                </tr>
+                    
+                <tr>
+                    <td>{;;number;;}</td>
+                    <td id="descp"><p>Representa un número, ya sea un número entero o un número con un componente fraccionario	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/number" target="new" title="Documentación">NUMBER</a></td>
+                </tr>
+                    
+                <tr>
+                    <td>{;;dimension;;}	</td>
+                    <td id="descp"><p>Representa un numero con una unidad adjunta, por ejemplo, 10px	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/dimension" target="new" title="Documentación">DIMENSION</a></td>
+                </tr>
+                    
+                <tr>
+                    <td>{;;percentage;;}</td>
+                    <td id="descp"><p>Representa un valor porcentual. A menudo se usa para definir un tamaño en relación con el objeto principal de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/percentage" target="new" title="Documentación">PORCENTAGE</a></td>
+                </tr>
+                
+                </tbody>
+            </table> 
+        </h2>
+    </div> 
+    <center>
+        <button class="botonArriba1" onclick="location.href='#top'"><img src="imagenes/flecha-arriba.png" width="90" height="90"></button>
+    </center>
+
+    <center>
+        <img src="imagenes/propiedades.png" width="590" height="420">
+    </center>
+    <!--CUARTA TABLA-->
+    <div>
+        <h2 id="propiedades">PROPIEDADES 
+            <table id="tablaCol">
+                <thead>
+                 <tr id="tabla4">
+                   <th>Elemento</th> 
+                   <th>Descripción</th>
+                   <th>Documentación</th>
+                 </tr>
+                </thead>
+                <tbody id="contTabla4">
+
+                <tr>
+                    <td>{;;width;;}</td>
+                    <td id="descp"><p>La propiedad CSS width establece el ancho de un elemento</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="new" title="Documentación">WIDTH</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;min-width;;}</td>
+                    <td id="descp"><p>La propiedad CSS min-width establece el ancho mínimo de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-width" target="new" title="Documentación">MIN-WIDTH</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;max-width;;}</td>
+                    <td id="descp"><p>La propiedad CSS max-width establece el ancho máximo de un elemento</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width" target="new" title="Documentación">MAX-WIDTH</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;height;;}</td>
+                    <td id="descp"><p>La propiedad CSS height especifica la altura de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/height" target="new" title="Documentación">HEIGHT</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;min-height;;}</td>
+                    <td id="descp"><p>La propiedad CSS min-height establece la altura mínima de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-height" target="new" title="Documentación">MIN-HEIGHT</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;max-height;;}	</td>
+                    <td id="descp"><p>La propiedad CSS max-height establece la altura máxima de un elemento</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-height" target="new" title="Documentación">MAX-HEIGHT</a></td>
+                </tr>
+
+                <tr>
+                    <td>{;;padding;;}</td>
+                    <td id="descp"><p>Establece el área de relleno en los cuatro lados de un elemento a la vez	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="new" title="Documentación">PADDING</a></td>
+                </tr>
+
+                <tr>
+                    <td>{;;padding-top;;}	</td>
+                    <td id="descp"><p>Establece la altura del área de relleno en la parte superior de un elemento</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-top" target="new" title="Documentación">PADDING-TOP</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;padding-right;;}</td>
+                    <td id="descp"><p>Establece el ancho del área de relleno a la derecha de un elemento</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-right" target="new" title="Documentación">PADDING-RIGHT</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;padding-bottom;;}</td>
+                    <td id="descp"><p>Establece la altura del área de relleno en la parte inferior de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-bottom" target="new" title="Documentación">PADDING-BOTTOM</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;padding-left;;}</td>
+                    <td id="descp"><p>Establece el ancho del área de relleno a la izquierda de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left" target="new" title="Documentación">PADDING-LEFT</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;border;;}</td>
+                    <td id="descp"><p>Establece el borde de un elemento (border-width, border-style y border-color)	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="new" title="Documentación">BORDER</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;border-width;;}	</td>
+                    <td id="descp"><p>Establece el ancho del borde de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width" target="new" title="Documentación">BORDER-WIDTH</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;border-style;;}	</td>
+                    <td id="descp"><p>Establece el estilo de línea para los cuatro lados del borde de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style" target="new" title="Documentación">BORDER-STYLE</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;border-color;;}</td>
+                    <td id="descp"><p>Establece el color del borde de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color" target="new" title="Documentación">BORDER-COLOR</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;margin;;}	</td>
+                    <td id="descp"><p>Establece el área de margen en los cuatro lados de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" target="new" title="Documentación">MARGIN</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;margin-top;;}	</td>
+                    <td id="descp"><p>Establece el área de margen en la parte superior de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top" target="new" title="Documentación">MARGIN-TOP</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;margin-right;;}	</td>
+                    <td id="descp"><p>Establece el área de margen en el lado derecho de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-right" target="new" title="Documentación">MARGIN-RIGHT</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;margin-bottom;;}	</td>
+                    <td id="descp"><p>Establece el área de margen en la parte inferior de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom" target="new" title="Documentación">MARGIN-BOTTOM</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;margin-left;;}</td>
+                    <td id="descp"><p>Establece el área de margen en el lado izquierdo de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left" target="new" title="Documentación">MARGIN-LEFT</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;box-sizing;;}	</td>
+                    <td id="descp"><p>Establece cómo se calculan el ancho y el alto totales de un elemento	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="new" title="Documentación">BOX-SIZING</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;aspect-ratio;;}	</td>
+                    <td id="descp"><p>Usada para verificar la relación ancho/alto del viewport	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio" target="new" title="Documentación">ASPECT-RATIO</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;orientation;;}	</td>
+                    <td id="descp"><p>Usada para verificar la orientación de la pantalla( portrait / landscape)	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation" target="new" title="Documentación">ORIENTATION</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;resolution;;}</td>
+                    <td id="descp"><p>Usada para verificar la densidad de pixeles del dispositivo	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/resolution" target="new" title="Documentación">RESOLUTION</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;grid;;}	</td>
+                    <td id="descp"><p>Usada para verificar si el dispositivo usa una pantalla basada en grid o bitmap	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid" target="new" title="Documentación">GRID</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;@media;;}	</td>
+                    <td id="descp"><p>Usada para verificar si el dispositivo usa una pantalla basada en grid o bitmap	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media" target="new" title="Documentación">@MEDIA</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;background-color;;}	</td>
+                    <td id="descp"><p>Usada para verificar si el dispositivo usa una pantalla basada en grid o bitmap	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="new" title="Documentación">BACKGROUND-COLOR</a></td>
+                </tr>
+
+                </tbody>
+            </table> 
+        </h2>
+    </div> 
+    <center>
+        <button class="botonArriba1" onclick="location.href='#top'"><img src="imagenes/flecha-arriba.png" width="90" height="90"></button>
+    </center>
+
+    <center>
+        <img src="imagenes/cssflexbox.png" width="450" height="590">
+    </center>
+    <!--QUINTA TABLA-->
+    <div>
+        <h2 id="flexboxes">FLEXBOX 
+            <table id="tablaCol">
+                <thead>
+                 <tr id="tabla5">
+                   <th>Elemento</th> 
+                   <th>Descripción</th>
+                   <th>Documentación</th>
+                 </tr>
+                </thead>
+                <tbody id="contTabla5">
+
+                <tr>
+                    <td>{;;display;;}</td>
+                    <td id="descp"><p>Establece si un elemento de bloque o en línea y si el diseño es de flujo, la cuadrícula o la flexión	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="new" title="Documentación">DISPLAY</a></td>
+                </tr>
+
+                <tr>
+                    <td>{;;flex;;}</td>
+                    <td id="descp"><p>Establece cómo un elemento flexible crecerá o se reducirá para ajustarse al espacio disponible	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex" target="new" title="Documentación">FLEX</a></td>
+                </tr>
+
+                <tr>
+                    <td>{;;flex-direction;;}</td>
+                    <td id="descp"><p>Permite establecer la dirección del eje principal del contenedor flexible	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction" target="new" title="Documentación">FLEX-DIRECTION</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;flex-wrap;;}	</td>
+                    <td id="descp"><p>Controla si el contenedor flexible es de una o de varias líneas y la dirección del eje transversal	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="new" title="Documentación">FLEX-WRAP</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;align-content;;}</td>
+                    <td id="descp"><p>Ajusta las líneas dentro de un contenedor flexible cuando hay espacio extra	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/es/docs/Web/CSS/align-content" target="new" title="Documentación">ALIGN-CONTENT</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;justify-content;;}</td>
+                    <td id="descp"><p>Define cómo el navegador distribuye el espacio entre y alrededor de los artículos flexibles	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/es/docs/Web/CSS/justify-content" target="new" title="Documentación">JUSTIFY-CONTENT</a></td>
+                </tr>
+                
+                <tr>
+                    <td>{;;align-items;;}</td>
+                    <td id="descp"><p>Controla la alineación de los elementos en el eje transversal. En Diseño de cuadrícula, controla la alineación de elementos en el Eje de bloque dentro de su área de cuadrícula	</p></td>
+                    <td><a class="enlace" href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="new" title="Documentación">ALIGN-ITEMS</a></td>
+                </tr>
+                   
+                </tbody>
+            </table> 
+        </h2>
+    </div> 
+    <center>
+        <button class="botonArriba1" onclick="location.href='#top'"><img src="imagenes/flecha-arriba.png" width="90" height="90"></button>
+    </center>
+</body>
